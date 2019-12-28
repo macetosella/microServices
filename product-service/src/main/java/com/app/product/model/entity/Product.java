@@ -1,12 +1,7 @@
 package com.app.product.model.entity;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -22,6 +17,7 @@ public class Product implements Serializable {
     private String name;
     private Double price;
 
+    @Column(name = "creation_date")
     @Temporal(TemporalType.DATE)
     private Date creationDate;
 
