@@ -21,6 +21,9 @@ public class Product implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date creationDate;
 
+    @Transient
+    private Integer port;
+
     public Long getId() {
         return id;
     }
@@ -51,5 +54,13 @@ public class Product implements Serializable {
 
     public void setCreationDate(Date creationDate) {
         this.creationDate = creationDate;
+    }
+
+    public Integer getPort() {
+        return port;
+    }
+
+    public void setPort(Integer port) {
+        this.port = port;
     }
 }
