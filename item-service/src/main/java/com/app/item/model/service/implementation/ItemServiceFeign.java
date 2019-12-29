@@ -4,14 +4,12 @@ import com.app.item.client.ProductClientRest;
 import com.app.item.model.Item;
 import com.app.item.model.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-@Primary
 public class ItemServiceFeign implements ItemService {
 
     private ProductClientRest productClientRest;
